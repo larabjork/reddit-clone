@@ -5,9 +5,16 @@ import PropTypes from 'prop-types';
 function PostList(props){
   return (
     <div>
-      {props.postList.map(post) =>
-
-      }
+      {props.postList.map((post) =>
+        <Post body={post.body}
+          key={post.id}/>
+      )}
     </div>
   );
 }
+
+PostList.propTypes = {
+  postList: PropTypes.array
+};
+
+export default PostList;

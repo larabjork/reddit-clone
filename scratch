@@ -1,0 +1,43 @@
+// function NewCommentForm(props){
+//   let _comment = null;
+//
+//   function handleNewCommentFormSubmission(event) {
+//     event.preventDefault();
+//     props.onNewCommentCreation({comment: _comment.value, id: v4()});
+//     _comment.value = '';
+//   }
+// }
+
+
+
+<form style={formStyle} onSubmit={handleNewCommentFormSubmission}>
+<textarea
+id='comment'
+placeholder='Your comment goes here.'
+ref={(textarea) => {_comment = textarea;}}/>
+<br></br>
+<button type='submit'>Comment!</button>
+</form>
+
+
+
+
+render(){
+  return (
+    <div>
+    <Header/>
+    <div className="container">
+    <div className="row">
+    <div className="col-md-8">
+    <Route exact path='/' render={()=><PostList postList={this.state.masterPostList} />}  />
+    <Route path='/newpost' render={()=><NewPostForm onNewPostCreation={this.handleAddingNewPostToList} />}  />
+    </div>
+    <div className="col-md-4">
+
+    </div>
+    </div>
+    </div>
+    </div>
+  );
+}
+}
