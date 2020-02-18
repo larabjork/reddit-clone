@@ -41,3 +41,5 @@ render(){
   );
 }
 }
+
+<img src={Search} alt='search' style={searchBar}/>

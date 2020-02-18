@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './components/Home';
 import Header from "./components/Header";
+import Banner from "./components/Banner";
 import PostList from "./components/PostList";
 import Post from "./components/Post";
 import NewPostForm from "./components/NewPostForm";
@@ -28,6 +29,8 @@ class App extends React.Component {
     return (
       <div>
       <Header/>
+      <br/>
+      <Banner/>
       <div className="container">
       <h1>Post</h1>
       <Switch>
